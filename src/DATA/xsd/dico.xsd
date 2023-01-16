@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tux="http://myGame/tux"
+           targetNamespace="http://myGame/tux"
+           elementFormDefault="qualified">
+    <!-- la racine dictionnaire de type Dictionnaire -->
+    <xs:element name="dictionnaire" type="tux:Dictionnaire"/>
+    <!-- l'élément dictionnaire qui contient mot de type Mots-->
+    <xs:complexType  name="Dictionnaire">
+        <xs:sequence>
+            <xs:element name="mot" type="tux:Mots" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    <!--l'élément mot qui contient contenu (string) et niveau(int) -->
+    </xs:complexType>
+    <xs:complexType  name="Mots">
+        <xs:sequence>
+            <xs:element name="contenu" />
+            <xs:element name="niveau" type="tux:Niveau"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Niveau de type int -->
+    <xs:simpleType name="Niveau">
+        <xs:restriction base="xs:int" >
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

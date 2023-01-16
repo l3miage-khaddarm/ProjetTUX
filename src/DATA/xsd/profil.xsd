@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           targetNamespace="http://myGame/tux"
+           elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tux="http://myGame/tux">
+    <xs:element name="profil" type="tux:Profil"/>
+       <!--l'élément  profil de type Profil qui contient le nom , avatar , anniversaire et le nombre de partie -->
+    <xs:complexType name="Profil">
+        <xs:sequence>
+            <xs:element name="nom"/>
+            <xs:element name="avatar"/>
+            <xs:element name="anniversaire" type="xs:date"/>
+            <xs:element name="parties" type="tux:Parties"/>
+        </xs:sequence>
+    </xs:complexType>
+       <!--le type complexe parties de type Parties qui contient partie  -->
+    <xs:complexType name="Parties">
+        <xs:sequence>
+            <xs:element name="partie" type="tux:Partie" minOccurs = "0" maxOccurs ="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+       <!--l'élément partie qui contient le temps et le mot et deux  attributs date et trouvé -->
+    <xs:complexType name="Partie">
+        <xs:sequence>
+            <xs:element name="temps" type="xs:double"/>
+            <xs:element name="mot" type="tux:Mot"/>
+        </xs:sequence>
+        <xs:attribute name="date" type="xs:date"/>
+        <xs:attribute name="trouvé"/>
+    </xs:complexType>
+       <!--l'élément mot dont le type est string , contient un attribut niveau , c'est pour cela on a défini un simpleContent  -->
+    <xs:complexType name="Mot"> 
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="niveau"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

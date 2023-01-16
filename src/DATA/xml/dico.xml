@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tux:dictionnaire
+            xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'
+            xmlns:tux="http://myGame/tux"
+            xs:schemaLocation='http://myGame/tux ../xsd/dico.xsd'>
+    <!-- on a opté pour un élément tux:mot qui contient deux éléments : tux:contenu c'est à dire le mot en question et tux:niveau-->
+    <tux:mot> 
+        <tux:contenu>maitenant</tux:contenu>
+        <tux:niveau>2</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>prompt</tux:contenu>
+        <tux:niveau>5</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>instance</tux:contenu>
+        <tux:niveau>4</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>demain</tux:contenu>
+        <tux:niveau>1</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>horizon</tux:contenu>
+        <tux:niveau>3</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>ludique</tux:contenu>
+        <tux:niveau>3</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>planète</tux:contenu>
+        <tux:niveau>2</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>salut</tux:contenu>
+        <tux:niveau>1</tux:niveau>
+    </tux:mot>
+    <tux:mot> 
+        <tux:contenu>écart-type</tux:contenu>
+        <tux:niveau>3</tux:niveau>
+    </tux:mot>
+
+</tux:dictionnaire>

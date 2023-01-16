@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- plateau du jeu qui contient les dimensions ,les textures et le pion -->
+<plateau>
+    <dimensions>
+        <height>100</height>
+        <width>40</width>
+        <depth>50</depth>
+    </dimensions>
+    <mapping>
+        <textureBottom>textures/floor/grass2.png</textureBottom>
+        <textureEast>texture/skybox/interstellar/east.png</textureEast>
+        <textureWest>texture/skybox/interstellar/west.png</textureWest>
+        <textureNorth>texture/skybox/interstellar/north.png</textureNorth>
+    </mapping>
+    <pion>une url</pion>
+
+
+</plateau>
